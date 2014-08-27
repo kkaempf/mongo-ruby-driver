@@ -98,6 +98,10 @@ describe Mongo::Indexable do
         indexable.ensure_index(spec, unique: true)
       end
 
+      after do
+        indexable.drop_index(spec)
+      end
+
       it 'raises an exception', if: write_command_enabled? do
         expect {
           indexable.ensure_index(spec, unique: false)
