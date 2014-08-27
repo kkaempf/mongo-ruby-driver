@@ -59,7 +59,14 @@ module Mongo
     # @since 2.0.0
     SYSTEM_INDEXES = 'system.indexes'.freeze
 
+    # Return the constant for the index key.
+    #
+    # @since 2.0.0
     INDEX_KEY = 'key'.freeze
+
+    # Constant for the index name field.
+    #
+    # @since 2.0.0
     INDEX_NAME = 'name'.freeze
 
     # Drop an index by its specification.
